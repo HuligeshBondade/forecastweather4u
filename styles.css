@@ -1,0 +1,193 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to right, #ece9e6, #ffffff);
+    color: #333;
+    background-size: cover;
+    transition: background-image 0.5s ease-in-out;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.1); /* Glassmorphic effect with white background */
+    color: #333; /* Dark text color for contrast */
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Rounded corners */
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+}
+
+h1{
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#current-weather {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.3); /* Glassmorphic background */
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass effect */
+}
+
+.weather-info {
+    text-align: center;
+}
+
+.weather-info h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #333; /* Dark color for better readability */
+}
+
+.weather-info p {
+    font-size: 1.2em;
+    margin: 5px 0;
+    color: #333; /* Darker color for better readability */
+}
+
+.clock-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border: 8px solid rgba(0, 0, 0, 0.1); /* Light border for subtle effect */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent for consistency */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1), 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.hand {
+    position: absolute;
+    top: 50%;
+    width: 50%;
+    transform-origin: 100%;
+    transform: translateX(-50%);
+    transition: transform 0.5s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.hour {
+    height: 6px;
+    width: 35%;
+    background-color: #333; /* Dark color for the hour hand */
+    border-radius: 6px;
+    left: 15%;
+}
+
+.minute {
+    height: 4px;
+    width: 45%;
+    background-color: #666; /* Medium color for the minute hand */
+    border-radius: 4px;
+    left: 5%;
+}
+
+.second {
+    height: 2px;
+    width: 50%;
+    background-color: #ff5733; /* Vibrant color for the second hand */
+    left: 0;
+}
+
+.center-dot {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #333; /* Dark center dot for better visibility */
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#weekly-forecast {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.forecast-card {
+    background-color: rgba(255, 255, 255, 0.2); /* Glassmorphic card background */
+    color: #333; /* Dark text color for contrast */
+    border-radius: 12px;
+    padding: 15px;
+    width: 140px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(10px); /* Blur effect for glassmorphism */
+}
+
+.forecast-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.forecast-card p {
+    margin: 8px 0;
+    font-size: 0.9em;
+    color: #333; /* Dark text color for contrast */
+}
+
+/* CSS for Suggestions Dropdown */
+.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: white;
+    position: absolute;
+    width: calc(100% - 40px); /* Matches the input width */
+    top: 45px; /* Adjust as necessary to position below the input */
+    z-index: 100;
+    display: none; /* Hidden by default */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.suggestion-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.suggestion-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Adjust positioning of the input and dropdown container */
+header {
+    position: relative; /* Anchor dropdown positioning to the header */
+}
