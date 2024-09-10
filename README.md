@@ -11,6 +11,8 @@ This project is a weather forecast website featuring a sleek glassmorphic design
 
 <img src="https://github.com/user-attachments/assets/d6df260c-f5d4-40b7-ba71-98df36ddacbf" alt="wheather forecasting" width="400" height="400">
 
+https://forecastweather4u.netlify.app/
+
 ## Technologies Used
 
 - **HTML, CSS, JavaScript**: For the core structure, styling, and functionality.
